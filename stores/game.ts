@@ -68,7 +68,8 @@ export const useGameStore = defineStore('game', () => {
   
   const start = async function () {
     loading.value = true
-    const wordsList: string[] = await $fetch('https://challenge.trio.dev/api/v1/wordle-words')
+    // const wordsList: string[] = await $fetch('https://challenge.trio.dev/api/v1/wordle-words')
+    const wordsList =  ['WORLD', 'CATCH', 'HORSE']
     loading.value = false
     index.value = 0
     board.value.length = 0
